@@ -1,0 +1,8 @@
+# Node modules
+node_modules/
+
+# Gulp output
+dist/
+
+# VS Code settings
+.vscode/
