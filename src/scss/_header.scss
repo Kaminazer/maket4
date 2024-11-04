@@ -22,6 +22,10 @@
         height: 100%;
     }
 
+    &__burger{
+        display: none;
+    }
+
     &__logo-img{
         width: 100%;
         height: auto;
@@ -66,7 +70,15 @@
 @media (max-width: 768px) {
     .header {
         &__menu{
-            display: none;
+            position: absolute;
+            top: -250%;
+            opacity: 0;
+            width: 100%;
+            background: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 20px;
+            transition: top 0.5s ease, opacity 0.5s ease; 
         }
 
         &__list{
@@ -78,68 +90,61 @@
             padding: 8px 10px;
         }
         &__burger{
+            display: block;
+            position: relative;
             height: 40px;
             width: 50px;
             background: var(--btn-color);
             border-radius: 5px;
             padding: 0 10px;
+            transition: all 0.5s ease;
         }
 
         &__burger-line{
             display: block;
             position: relative;
-            top: 18px;
-        }
-
-        &__burger-line,
-        &__burger-line::after,
-        &__burger-line::before{
+            top: 19px;
             width: 30px;
             height: 2px;
             background: #fff;
         }
 
-        &__burger-line::after,
-        &__burger-line::before{
+        &__burger::after,
+        &__burger::before{
             content: '';
             display: block;
             position: absolute;
+            width: 30px;
+            height: 2px;   
+            background: #fff;     
+            transition: all 0.5s ease; 
         }
 
-        &__burger-line::after{
-            top: 8px;
+        &__burger::after{
+            bottom: 10px;
         }
 
-        &__burger-line::before{
-            bottom: 8px;
+        &__burger::before{
+            top: 10px;
         }
 
         &__menu--active{
-            display: block;
-            width: 100%;
-            background: #fff;
-            position: absolute;
             top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding-bottom: 20px;
+            opacity: 1;
         }
         
         &__burger--active &__burger-line{
             opacity: 0;
-        }        
+        }             
         
-        &__burger--active::after{
-            opacity: 0;
-        }        
-        
-        &__burger--active &__burger-line{
-            opacity: 0;
+        &__burger--active::before {
+            transform: rotate(45deg);
+            top: 19px;
         }
-
-
-
-        
-
+    
+        &__burger--active::after {
+            transform: rotate(-45deg);
+            bottom: 19px;
+        }
     }
 }

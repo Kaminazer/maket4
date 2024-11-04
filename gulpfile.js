@@ -33,7 +33,7 @@ export const scripts = () => {
         .pipe(concat('script.js'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest('src/js'))
         .pipe(browserSyncInstance.stream());
 };
 
