@@ -48,15 +48,54 @@
     </header>
     <section class="content">
         <div class="container">
-            <div class="content__left">
-                <h1 class="content__title">
-                    Курси програмування у Луцьку
-                </h1>
-                <p class="content__text">
-                    Сфера IT розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з ІТ. Існує лише одна проблема це - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати ІТ спеціалістом. Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня. 
-                </p>
+            <div class="content__container">
+                <div class="content__left">
+                    <h1 class="content__title">
+                        Курси програмування у Луцьку
+                    </h1>
+                    <p class="content__text">
+                        Сфера IT розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з IT. Існує лише одна проблема це - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати IT спеціалістом. Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня. 
+                    </p>
+                </div>
+                <div class="content__form" id="form">
+                    <h2 class="content__form-title">Зареєструватися на курси</h2>
+                    <form class="register-form">
+                        <div class="register-form__group">
+                            <label class="register-form__label" for="name" >Ім'я</label>
+                            <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
+                            <input class = "register-form__input" type="text" name="name" id="name" placeholder="Ім'я" required>
+                        </div>         
+                        <div class="register-form__group">
+                            <label class="register-form__label" for="surname" >Прізвище</label>
+                            <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
+                            <input class = "register-form__input" type="text" name="surname" id="surname" placeholder="Прізвище" required>
+                        </div>        
+                        <div class="register-form__group">
+                            <label class="register-form__label" for="interest" >Мене більше цікавить</label>
+                            <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
+                            <input class = "register-form__input" type="text" name="interest" id="interest" placeholder="developer or QA" required>
+                        </div>         
+                        <div class="register-form__group">
+                            <label class="register-form__label" for="phone" >Номер телефону</label>
+                            <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
+                            <input class = "register-form__input" type="text" name="phone" id="phone" placeholder="Номер телефону: +38 XXX XX XX XXX" required>
+                        </div>                
+                        <div class="register-form__group">
+                            <label class="register-form__label" for="email" >Email</label>
+                            <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
+                            <input class = "register-form__input" type="text" name="email" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="register-form__group ">
+                            <input type="checkbox" name="policy" id="policy" requiredv>
+                            <label class="register-form__label" for="policy">Я погоджуюсь з <a class="register-form__policy-link" href="#">Політикою Конфіденційності</a></label>
+                            <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
+                        </div>
+                        <button class="register-form__btn btn">Зареєструватися зараз</button>
+                    </form>
+
+                </div>
             </div>
-            <div class="content__form"></div>
         </div>
     </section>
 

@@ -3,6 +3,7 @@ import { deleteAsync } from 'del';
 import gulpSass from 'gulp-sass';
 import * as sass from 'sass';
 import cleanCSS from 'gulp-clean-css';
+import terser from 'gulp-terser';
 import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import concat from 'gulp-concat';
@@ -29,9 +30,9 @@ export const styles = () => {
 
 // minify js
 export const scripts = () => {
-    return gulp.src('src/js/*.js')
+    return gulp.src(['src/js/*.js', '!src/js/*.min.js'])
         .pipe(concat('script.js'))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('src/js'))
         .pipe(browserSyncInstance.stream());
