@@ -2,6 +2,7 @@
 @use 'variables';
 @use 'mixins';
 @use 'header';
+@use '_sections/content';
 
 *,
 *::before,
@@ -18,7 +19,23 @@ a {
     text-decoration: none;
     color: var(--text-color);
 }
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-base);
+    color: var(--text-color);
+    background: var(--bg-gray);
+    overflow-x: hidden;
+}
 .lock{
     overflow: hidden;
     max-height: 100vh;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
 }
