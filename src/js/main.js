@@ -5,7 +5,7 @@ $(document).ready(function() {
         $('body').toggleClass('lock');
     });
 
-    $('.header__link').click(function(event) {
+    $('.header__link, .btn__link').click(function(event) {
         if (window.innerWidth < 768) {
             $('.header__burger').removeClass('header__burger--active');
             $('.header__menu').removeClass('header__menu--active');

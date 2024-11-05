@@ -78,16 +78,16 @@
                         <div class="register-form__group">
                             <label class="register-form__label" for="phone" >Номер телефону</label>
                             <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
-                            <input class = "register-form__input" type="text" name="phone" id="phone" placeholder="Номер телефону: +38 XXX XX XX XXX" required>
+                            <input class = "register-form__input" type="tel" name="phone" id="phone"  title="+38 XXX XX XX XXX" placeholder="Номер телефону: +38 XXX XX XX XXX" pattern="^\+38 \d{3} \d{2} \d{2} \d{3}$" required>
                         </div>                
                         <div class="register-form__group">
                             <label class="register-form__label" for="email" >Email</label>
                             <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
-                            <input class = "register-form__input" type="text" name="email" id="email" placeholder="Email" required>
+                            <input class = "register-form__input" type="email" name="email" id="email" placeholder="Email" required>
                         </div>
 
                         <div class="register-form__group ">
-                            <input type="checkbox" name="policy" id="policy" requiredv>
+                            <input type="checkbox" name="policy" id="policy" required>
                             <label class="register-form__label" for="policy">Я погоджуюсь з <a class="register-form__policy-link" href="#">Політикою Конфіденційності</a></label>
                             <img class="register-form__required-field" src="assets/icons/required.png" alt="icon required field" >
                         </div>
