@@ -98,6 +98,18 @@
         border-radius: 5px;
         height: 50px;
 
+        &:focus{
+            outline: none;
+            border-color: var(--bg-blue);
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        &:user-invalid{
+            outline: none;
+            border-color: #f00;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+
         &::placeholder{
             font-size: 14px;    
             opacity: 0.7;
